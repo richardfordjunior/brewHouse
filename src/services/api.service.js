@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import { API_ROOT_URL } from '../config';
+import { API_ROOT_URL } from '../config'
 
 const ApiService = {
   init() {

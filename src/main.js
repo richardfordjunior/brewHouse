@@ -5,21 +5,19 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueRouter from 'vue-router'
 import router from './router/routes'
 
-Vue.config.productionTip = false
 import { 
   BootstrapVue, 
-  IconsPlugin, 
-  PaginationPlugin, 
-  FormCheckboxPlugin} from 'bootstrap-vue'
+  PaginationPlugin} from 'bootstrap-vue'
 // Install BootstrapVue
-Vue.use(BootstrapVue, IconsPlugin, PaginationPlugin, FormCheckboxPlugin)
+Vue.use(BootstrapVue, PaginationPlugin)
 // Optionally install the BootstrapVue icon components plugin
 
 Vue.use(VueRouter)
 
 
 new Vue({
- router,
- // store,
+router,
+BootstrapVue,
+PaginationPlugin,
   render: h => h(App)
 }).$mount('#app');
